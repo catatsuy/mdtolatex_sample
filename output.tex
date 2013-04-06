@@ -1,0 +1,68 @@
+\documentclass[12Q,papersize]{jsarticle}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{calc}
+\setlength{\textheight}{48\baselineskip+\topskip}
+\setlength{\topmargin}{(297truemm-\textheight)/2-1truein-2truecm}
+\setlength{\textwidth}{55zw}
+\setlength{\oddsidemargin}{(210truemm-\textwidth)/2-1truein}
+\usepackage[sc]{mathpazo}
+\usepackage[scaled]{helvet}
+\usepackage[scaled]{beramono}
+\usepackage[deluxe,expert]{otf}
+\usepackage{textcomp,okumacro}
+
+\title{Markdown to \LaTeX \linebreak シンプルに文章を書くために}
+\author{catatsuy}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{書き方}
+
+最初にタイトルや名前などを書いておく．
+
+箇条書きなどとてもシンプルに書ける．
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  これだけで
+\item
+  箇条書きができますよ
+\item
+  あいうえお
+\end{itemize}
+
+\verb`gcc` とかとてもシンプルにかける．これはすごく嬉しい．
+
+\begin{verbatim}
+#include <stdio.h>
+int main() {
+  printf("hello, world\n");
+  return 0;
+}
+\end{verbatim}
+
+簡単なソースコードならこれで十分．
+
+\section{使い方}
+
+\verb`header.tex` に読み込みたいパッケージや余白設定などを書いておく．
+
+オプションなど長いので \verb`Makefile` を作ること推奨．
+
+\verb`make tolatex` で \verb`pandoc` で Markdown の文章を
+\LaTeX 形式に出来る．
+
+\verb`make topdf` で \verb`pdf` ファイルを出力できる．
+
+\verb`make` もしくは \verb`make all` で上記の 2 つを同時に実行できる．
+
+\verb`pandoc` を \verb`pandoc.my`
+という名前のリネームしているので自分用に直して利用してください．
+
+\end{document}

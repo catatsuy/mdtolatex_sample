@@ -1,0 +1,39 @@
+% Markdown to \LaTeX \linebreak シンプルに文章を書くために
+% catatsuy
+% 
+
+
+# 書き方
+
+最初にタイトルや名前などを書いておく．
+
+箇条書きなどとてもシンプルに書ける．
+
+* これだけで
+* 箇条書きができますよ
+* あいうえお
+
+`gcc` とかとてもシンプルにかける．これはすごく嬉しい．
+
+    #include <stdio.h>
+    int main() {
+      printf("hello, world\n");
+      return 0;
+    }
+
+簡単なソースコードならこれで十分．
+
+# 使い方
+
+`header.tex` に読み込みたいパッケージや余白設定などを書いておく．
+
+オプションなど長いので `Makefile` を作ること推奨．
+
+`make tolatex` で `pandoc` で Markdown の文章を \LaTeX 形式に出来る．
+
+`make topdf` で `pdf` ファイルを出力できる．
+
+`make` もしくは `make all` で上記の 2 つを同時に実行できる．
+
+`pandoc` を `pandoc.my` という名前のリネームしているので自分用に直して利用してください．
+
