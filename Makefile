@@ -1,6 +1,6 @@
 PANDOC = pandoc.my
 OPTS_SET = -f markdown -t latex --include-in-header header.tex -s
-OPTS_VAR = -V fontsize=12Q -V documentclass=jsarticle
+OPTS_VAR = -V fontsize=12Q -V documentclass=jsarticle -V addoption=papersize
 
 INPUT = input.tex
 OUTPUT = output.tex

@@ -23,3 +23,6 @@ mdtolatex_sample
     cabal-dev install --sandbox=.
 
 これで `bin` ディレクトリ以下に `pandoc` という実行ファイルができているはずなのでこれを `PATH` の通っているところに移動する
+
+`pandoc` の `-V addoption=papersize` は私の独自の拡張です  
+ドキュメントクラスのオプションを追加できます
